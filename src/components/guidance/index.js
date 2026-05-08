@@ -5,3 +5,5 @@ export { default as GuidanceAnswerModal } from './GuidanceAnswerModal';
 export { default as AiReframeSuggestion } from './AiReframeSuggestion';
 export { default as GuidanceSummaryCard } from './GuidanceSummaryCard';
 export * from './mockGuidanceTriggers';
+
+export { default as GuidanceIntegrationExample } from './GuidanceIntegrationExample';
