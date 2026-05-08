@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 引導卡片 Demo</title>
+    <style>
+      :root { color-scheme: light; }
+      body {
+        margin: 0;
+        font-family: Inter, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f5f7fb;
+        color: #111827;
+      }
+      .page {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .header { margin-bottom: 16px; }
+      .layout {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 16px;
+      }
+      .panel {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+      }
+      .chat-stream { min-height: 360px; }
+      .root-box {
+        margin-top: 12px;
+        border: 1px dashed #93c5fd;
+        border-radius: 10px;
+        padding: 12px;
+        background: #eff6ff;
+        color: #1e3a8a;
+      }
+      code { background: #f3f4f6; padding: 2px 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="header panel">
+        <h1>AI 引導卡片（Mock UI）</h1>
+        <p>這是你要的「主 HTML 檔」入口頁。可先作為整合前的頁面骨架。</p>
+        <div class="root-box">
+          React 掛載點：<code>&lt;div id="root" /&gt;</code>
+          <div id="root"></div>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel">
+          <h2>私人引導卡區</h2>
+          <p>建議放在使用者輸入框上方或側邊。</p>
+          <p>在 React 中可掛載：<code>&lt;PrivateGuidanceCard /&gt;</code></p>
+        </aside>
+
+        <article class="panel chat-stream">
+          <h2>共同聊天室訊息流</h2>
+          <p>在訊息流中插入：<code>&lt;SharedGuidanceCard /&gt;</code></p>
+          <p>雙方作答後再顯示答案與 <code>&lt;GuidanceSummaryCard /&gt;</code>。</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
